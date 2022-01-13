@@ -36,3 +36,4 @@
 ./microshell ";" ";" /bin/echo OK
 ./microshell ";" ";" /bin/echo OK ";"
 ./microshell ";" ";" /bin/echo OK ";" ";"
+valgrind --track-fds=yes --trace-children=yes ./microshell ./microshell /bin/ls "|" /usr/bin/grep microshell "|" /usr/bin/grep l.h ";" /bin/echo pppp ";" /bin/echo d
